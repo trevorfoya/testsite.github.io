@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Our Services — IHD Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.svc-overview-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:48px; }
+.svc-big-card { background:var(--white); border:1px solid var(--border); border-radius:18px; padding:32px; text-decoration:none; color:inherit; display:block; transition:box-shadow .25s, transform .2s; position:relative; overflow:hidden; }
+.svc-big-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--teal); transform:scaleX(0); transform-origin:left; transition:transform .3s; }
+.svc-big-card:hover { box-shadow:var(--shadow); transform:translateY(-5px); }
+.svc-big-card:hover::before { transform:scaleX(1); }
+.svc-big-card.highlight { background:var(--navy); border-color:var(--navy); }
+.svc-big-card.highlight .card-icon-bg { background:rgba(46,139,122,.2); }
+.svc-big-card.highlight .card-icon svg { stroke:var(--teal-l); }
+.svc-big-card.highlight .card-title { color:var(--white); }
+.svc-big-card.highlight .card-desc { color:rgba(255,255,255,.5); }
+.svc-big-card.highlight .card-link { color:var(--teal-l); }
+.card-icon-bg { width:52px; height:52px; border-radius:13px; background:var(--teal-xl); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+.card-icon-bg svg { width:24px; height:24px; stroke:var(--teal); fill:none; stroke-width:1.8; }
+.card-title { font-size:18px; font-weight:500; color:var(--navy); margin-bottom:10px; }
+.card-desc { font-size:14px; color:var(--muted); line-height:1.7; margin-bottom:18px; }
+.card-link { font-size:13px; color:var(--teal); font-weight:500; display:inline-flex; align-items:center; gap:5px; }
+.new-tag { position:absolute; top:16px; right:16px; background:var(--teal); color:#fff; font-size:10px; font-weight:500; padding:3px 10px; border-radius:99px; }
+@media(max-width:960px){ .svc-overview-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:600px){ .svc-overview-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html" class="active">Services ▾</a>
+      <div class="dropdown">
+        <a href="service-supported-living.html">Supported Living</a>
+        <a href="service-domiciliary-care.html">Domiciliary Care</a>
+        <a href="service-intensive-support.html">Intensive Support</a>
+        <a href="service-daily-living.html">Daily Living Skills</a>
+        <a href="service-social-skills.html">Social Skills</a>
+        <a href="service-employment.html">Employment Services</a>
+        <a href="service-floating-support.html">Floating Support</a>
+        <a href="service-forensic.html">Forensic Placements</a>
+        <a href="service-personal-budget.html">Personal Budget</a>
+        <a href="service-person-centred.html">Person Centred Solutions</a>
+        <a href="service-referral.html">Client Referral</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Our Homes</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="refer.html" class="nav-cta">Refer a Client →</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb"><a href="index.html">Home</a> / Services</div>
+    <h1>Our services</h1>
+    <p>We offer a comprehensive range of supported living and care services — each designed around the individual, not a one-size-fits-all approach.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-label">What we offer</div>
+    <h2 class="section-title">A complete range of care services</h2>
+    <p class="section-sub">From intensive 24-hour support to flexible floating care, we cover the full spectrum of need. Click any service to find out more.</p>
+    <div class="svc-overview-grid">
+      <a href="service-supported-living.html" class="svc-big-card highlight">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="card-title">Supported Living</div>
+        <div class="card-desc">High-quality supported housing for vulnerable adults with mental health needs, from 24-hour intensive support to low-level floating care.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-domiciliary-care.html" class="svc-big-card" style="border-color:var(--teal);">
+        <span class="new-tag">New</span>
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <div class="card-title">Domiciliary Care</div>
+        <div class="card-desc">Home-to-home care supporting people to remain in their own homes safely and independently, with flexible support packages.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-intensive-support.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="card-title">Intensive Support</div>
+        <div class="card-desc">2:1 and 1:1 support packages 24 hours a day for service users with challenging or complex needs in the community.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-daily-living.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="card-title">Daily Living Skills</div>
+        <div class="card-desc">Building structure and routine — from personal hygiene and budgeting to cooking, shopping and verbal skills.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-social-skills.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <div class="card-title">Social Skills</div>
+        <div class="card-desc">Confidence building, managing relationships, assertiveness, outdoor activities and community integration.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-employment.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <div class="card-title">Employment Services</div>
+        <div class="card-desc">Supporting educational needs and employment opportunities, helping residents return to work with confidence.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-floating-support.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="card-title">Floating Support</div>
+        <div class="card-desc">Flexible, low-level support for people living independently — from one hour a week upwards in their own home.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-person-centred.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div class="card-title">Person Centred Solutions</div>
+        <div class="card-desc">Co-designed support plans with families and professionals, covering the full range from intensive to floating support.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-personal-budget.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div class="card-title">Personal Budget Support</div>
+        <div class="card-desc">Helping service users manage personal budgets and maintain control over their care and daily life choices.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-referral.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/><path d="M2 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div class="card-title">Client Referral</div>
+        <div class="card-desc">Accepting referrals from CMHT, hospital teams and Social Services. We jointly assess and agree placements.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+      <a href="service-forensic.html" class="svc-big-card">
+        <div class="card-icon-bg"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="card-title">Forensic Placements</div>
+        <div class="card-desc">Specialist 24-hour supported living for people with a forensic history, including S37/41, focused on reintegration.</div>
+        <span class="card-link">Full details →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="referral-band">
+  <div class="referral-inner">
+    <div><h2>Not sure which service is right?</h2><p>Contact our team and we'll help identify the most appropriate support package for your service user.</p></div>
+    <a href="contact.html" class="btn-white">Talk to us →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></div>
+      <p style="color:rgba(255,255,255,.65);">Providing supported living and mental health care across the UK.</p>
+      <div class="footer-contact"><a href="tel:01344538094">📞 01344 538 094</a><a href="mailto:info@ihdcare.co.uk">✉ info@ihdcare.co.uk</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="service-supported-living.html">Supported Living</a></li><li><a href="service-domiciliary-care.html">Domiciliary Care</a></li><li><a href="service-intensive-support.html">Intensive Support</a></li><li><a href="service-daily-living.html">Daily Living Skills</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="about.html">About IHD Care</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">News</a></li><li><a href="careers.html">Work With Us</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="refer.html">Refer a Client</a></li><li><a href="contact.html">General Enquiry</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 IHD Care Ltd. All rights reserved.</span><span>Registered in England &amp; Wales</span></div>
+</footer>
+</body>
+</html>

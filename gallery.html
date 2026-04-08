@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Our Homes — IHD Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.gallery-intro { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; margin-bottom:56px; }
+.gallery-main-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; }
+.gallery-full { grid-column:span 2; }
+.gallery-item { border-radius:16px; overflow:hidden; aspect-ratio:4/3; position:relative; cursor:pointer; }
+.gallery-item:nth-child(1) { aspect-ratio:16/9; }
+.gallery-img-placeholder { width:100%; height:100%; transition:transform .4s; object-fit:cover; display:block; }
+.gallery-item:hover .gallery-img-placeholder { transform:scale(1.05); }
+.g1 { background:linear-gradient(135deg,#2a4a38,#1a3228); }
+.g2 { background:linear-gradient(135deg,#38414e,#252d38); }
+.g3 { background:linear-gradient(135deg,#4a3c2c,#322818); }
+.g4 { background:linear-gradient(135deg,#2c3a48,#1a2530); }
+.g5 { background:linear-gradient(135deg,#3a2d42,#261a2e); }
+.g6 { background:linear-gradient(135deg,#2a3a30,#182818); }
+.gallery-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,.6)); padding:24px 18px 16px; color:#fff; }
+.gallery-caption h3 { font-size:16px; font-weight:500; }
+.gallery-caption p { font-size:13px; opacity:.75; }
+.home-info-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:56px; }
+.home-info-card { background:var(--sand); border-radius:14px; padding:24px; }
+.home-info-card h4 { font-size:15px; font-weight:500; color:var(--navy); margin-bottom:8px; }
+.home-info-card p { font-size:14px; color:var(--muted); line-height:1.65; }
+@media(max-width:960px){ .gallery-intro { grid-template-columns:1fr; } .gallery-main-grid { grid-template-columns:1fr 1fr; } .gallery-full { grid-column:span 2; } .home-info-grid { grid-template-columns:1fr; } }
+@media(max-width:600px){ .gallery-main-grid { grid-template-columns:1fr; } .gallery-full { grid-column:span 1; } }
+</style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="service-supported-living.html">Supported Living</a>
+        <a href="service-domiciliary-care.html">Domiciliary Care</a>
+        <a href="service-intensive-support.html">Intensive Support</a>
+        <a href="service-daily-living.html">Daily Living Skills</a>
+        <a href="service-social-skills.html">Social Skills</a>
+        <a href="service-employment.html">Employment Services</a>
+        <a href="service-floating-support.html">Floating Support</a>
+        <a href="service-forensic.html">Forensic Placements</a>
+        <a href="service-personal-budget.html">Personal Budget</a>
+        <a href="service-referral.html">Client Referral</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Our Homes</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="refer.html" class="nav-cta">Refer a Client →</a></li>
+  </ul>
+</nav><div class="page-hero"><div class="page-hero-inner">
+  <div class="page-hero-breadcrumb"><a href="index.html">Home</a> / Our Homes</div>
+  <h1>Our homes</h1>
+  <p>Comfortable, safe and welcoming environments designed to feel like a real home — not an institution.</p>
+</div></div>
+<section><div class="container">
+  <div class="gallery-intro">
+    <div>
+      <div class="section-label">Our properties</div>
+      <h2 class="section-title">Well-maintained homes in the community</h2>
+      <p class="section-sub">Our properties are located close to amenities, public transport, employment and education facilities — supporting residents to integrate into their local communities.</p>
+    </div>
+    <div style="background:var(--navy);border-radius:16px;padding:28px;color:#fff;">
+      <div style="font-family:var(--font-head);font-size:42px;color:var(--warm-l);line-height:1;margin-bottom:8px;">5</div>
+      <div style="font-size:14px;color:rgba(255,255,255,.6);">Supported homes currently in operation, with more in development</div>
+    </div>
+  </div>
+  <div class="gallery-main-grid">
+    <div class="gallery-item gallery-full">
+      <img src="HV.png" alt="Hastings View" class="gallery-img-placeholder" style="object-fit:cover;">
+      <div class="gallery-caption"><h3>Hastings View</h3><p>Our newest property — comfortable rooms in a welcoming community setting</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="MC_House.png" alt="MC House" class="gallery-img-placeholder" style="object-fit:cover;">
+      <div class="gallery-caption"><h3>MC House</h3><p>A welcoming, well-maintained home in the community</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="SS.jpg" alt="SS House" class="gallery-img-placeholder" style="object-fit:cover;">
+      <div class="gallery-caption"><h3>SS House</h3><p>Spacious family-style home close to local amenities</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="PH.png" alt="PH House" class="gallery-img-placeholder" style="object-fit:cover;">
+      <div class="gallery-caption"><h3>PH House</h3><p>A warm and welcoming environment for our residents</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="OH_Front_view.png" alt="OH House — Front view" class="gallery-img-placeholder" style="object-fit:cover;">
+      <div class="gallery-caption"><h3>OH House</h3><p>Modern supported living property with excellent community access</p></div>
+    </div>
+    <div class="gallery-item">
+      <img src="OH_House.png" alt="OH House" class="gallery-img-placeholder" style="object-fit:cover;">
+      <div class="gallery-caption"><h3>OH House</h3><p>Private, comfortable spaces supporting independence and wellbeing</p></div>
+    </div>
+  </div>
+  <div class="home-info-grid">
+    <div class="home-info-card"><h4>Private bedrooms</h4><p>Each resident has their own private, furnished bedroom — a personal space that is truly their own.</p></div>
+    <div class="home-info-card"><h4>Shared living spaces</h4><p>Communal lounges, kitchens and gardens encourage social interaction and a sense of community.</p></div>
+    <div class="home-info-card"><h4>Local amenities</h4><p>Our homes are located close to shops, transport links, voluntary work, education and employment facilities.</p></div>
+  </div>
+</div></section>
+<div class="referral-band"><div class="referral-inner">
+  <div><h2>Interested in a placement?</h2><p>Contact us or submit a referral to find out about current availability.</p></div>
+  <a href="refer.html" class="btn-white">Make a referral →</a>
+</div></div><footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></div>
+      <p style="color:rgba(255,255,255,.65);">Providing supported living and mental health care across the UK.</p>
+      <div class="footer-contact"><a href="tel:01344538094">📞 01344 538 094</a><a href="mailto:info@ihdcare.co.uk">✉ info@ihdcare.co.uk</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="service-supported-living.html">Supported Living</a></li><li><a href="service-domiciliary-care.html">Domiciliary Care</a></li><li><a href="service-intensive-support.html">Intensive Support</a></li><li><a href="service-daily-living.html">Daily Living Skills</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="about.html">About IHD Care</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">News</a></li><li><a href="careers.html">Work With Us</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="refer.html">Refer a Client</a></li><li><a href="contact.html">General Enquiry</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 IHD Care Ltd. All rights reserved.</span><span>Registered in England &amp; Wales</span></div>
+</footer></body></html>

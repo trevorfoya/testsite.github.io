@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact Us — IHD Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+.contact-form { display:flex; flex-direction:column; gap:18px; }
+.form-group { display:flex; flex-direction:column; gap:6px; }
+.form-group label { font-size:13px; font-weight:500; color:var(--navy); }
+.form-group input, .form-group textarea, .form-group select { width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:9px; font-family:var(--font-body); font-size:15px; color:var(--text); background:var(--white); transition:border-color .2s; outline:none; }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color:var(--teal); }
+.form-group textarea { min-height:140px; resize:vertical; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.info-card { background:var(--sand); border-radius:16px; padding:28px; margin-bottom:16px; }
+.info-card h4 { font-size:15px; font-weight:500; color:var(--navy); margin-bottom:14px; }
+.info-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:14px; font-size:14px; color:var(--muted); line-height:1.6; }
+.info-item-icon { font-size:18px; flex-shrink:0; }
+@media(max-width:960px){ .contact-grid { grid-template-columns:1fr; } .form-row { grid-template-columns:1fr; } }
+</style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="service-supported-living.html">Supported Living</a>
+        <a href="service-domiciliary-care.html">Domiciliary Care</a>
+        <a href="service-intensive-support.html">Intensive Support</a>
+        <a href="service-daily-living.html">Daily Living Skills</a>
+        <a href="service-social-skills.html">Social Skills</a>
+        <a href="service-employment.html">Employment Services</a>
+        <a href="service-floating-support.html">Floating Support</a>
+        <a href="service-forensic.html">Forensic Placements</a>
+        <a href="service-personal-budget.html">Personal Budget</a>
+        <a href="service-referral.html">Client Referral</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Our Homes</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="refer.html" class="nav-cta">Refer a Client →</a></li>
+  </ul>
+</nav><div class="page-hero"><div class="page-hero-inner">
+  <div class="page-hero-breadcrumb"><a href="index.html">Home</a> / Contact Us</div>
+  <h1>Get in touch</h1>
+  <p>Whether you're a professional referrer, a family member or someone seeking support, we'd love to hear from you.</p>
+</div></div>
+<section><div class="container"><div class="contact-grid">
+  <div>
+    <div class="section-label">Send us a message</div>
+    <h2 class="section-title" style="margin-bottom:28px;">How can we help?</h2>
+    <form class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>First name</label><input type="text" placeholder="Your first name"></div>
+        <div class="form-group"><label>Last name</label><input type="text" placeholder="Your last name"></div>
+      </div>
+      <div class="form-group"><label>Email address</label><input type="email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>Phone number</label><input type="tel" placeholder="07700 000 000"></div>
+      <div class="form-group"><label>Enquiry type</label>
+        <select><option>General enquiry</option><option>Referral enquiry</option><option>Careers / joining the team</option><option>Media / press</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Your message</label><textarea placeholder="Tell us how we can help..."></textarea></div>
+      <button type="submit" class="btn-primary" style="align-self:flex-start;">Send message →</button>
+    </form>
+  </div>
+  <div>
+    <div class="info-card">
+      <h4>Contact details</h4>
+      <div class="info-item"><span class="info-item-icon">📞</span><div><strong style="display:block;color:var(--navy);">Phone</strong><a href="tel:01344538094" style="color:var(--teal);text-decoration:none;">01344 538 094</a></div></div>
+      <div class="info-item"><span class="info-item-icon">✉</span><div><strong style="display:block;color:var(--navy);">Email</strong><a href="mailto:info@ihdcare.co.uk" style="color:var(--teal);text-decoration:none;">info@ihdcare.co.uk</a></div></div>
+      <div class="info-item"><span class="info-item-icon">🕐</span><div><strong style="display:block;color:var(--navy);">Office hours</strong>Monday – Friday, 9am – 5pm<br>24/7 support available for existing residents</div></div>
+    </div>
+    <div class="info-card">
+      <h4>Looking to make a referral?</h4>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:16px;">If you're a professional referring a client, our dedicated referral form will help us process your enquiry more quickly.</p>
+      <a href="refer.html" class="btn-primary" style="font-size:14px;">Go to referral form →</a>
+    </div>
+    <div class="info-card">
+      <h4>Looking for work?</h4>
+      <p style="font-size:14px;color:var(--muted);line-height:1.65;margin-bottom:16px;">If you'd like to join the IHD Care team, please visit our careers page to upload your CV and view apply to us.</p>
+      <a href="careers.html" class="btn-outline-teal" style="font-size:14px;">View careers →</a>
+    </div>
+  </div>
+</div></div></section><footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></div>
+      <p style="color:rgba(255,255,255,.65);">Providing supported living and mental health care across the UK.</p>
+      <div class="footer-contact"><a href="tel:01344538094">📞 01344 538 094</a><a href="mailto:info@ihdcare.co.uk">✉ info@ihdcare.co.uk</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="service-supported-living.html">Supported Living</a></li><li><a href="service-domiciliary-care.html">Domiciliary Care</a></li><li><a href="service-intensive-support.html">Intensive Support</a></li><li><a href="service-daily-living.html">Daily Living Skills</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="about.html">About IHD Care</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">News</a></li><li><a href="careers.html">Work With Us</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="refer.html">Refer a Client</a></li><li><a href="contact.html">General Enquiry</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 IHD Care Ltd. All rights reserved.</span><span>Registered in England &amp; Wales</span></div>
+</footer></body></html>

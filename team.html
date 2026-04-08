@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Meet Our Team — IHD Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+.team-card { background:var(--white); border:1px solid var(--border); border-radius:18px; overflow:hidden; }
+.team-photo { height:220px; display:flex; align-items:center; justify-content:center; }
+.team-photo.tp1 { background:linear-gradient(135deg,var(--teal-xl),#b8e8e1); }
+.team-photo.tp2 { background:linear-gradient(135deg,var(--warm-xl),#f0dbb8); }
+.team-photo.tp3 { background:linear-gradient(135deg,#e8eef7,#c5d5ee); }
+.team-photo.tp4 { background:linear-gradient(135deg,#f7ede8,#eed8ce); }
+.team-photo.tp5 { background:linear-gradient(135deg,#edf7f0,#c5e8cf); }
+.team-photo.tp6 { background:linear-gradient(135deg,#f5edf7,#ddc5e8); }
+.team-initials { width:88px; height:88px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--font-head); font-size:32px; color:#fff; }
+.ti-teal { background:var(--teal); }
+.ti-warm { background:var(--warm); }
+.ti-navy { background:var(--navy); }
+.team-info { padding:22px 24px; }
+.team-name { font-size:17px; font-weight:500; color:var(--navy); margin-bottom:4px; }
+.team-role { font-size:13px; color:var(--teal); font-weight:500; margin-bottom:10px; }
+.team-bio { font-size:14px; color:var(--muted); line-height:1.65; }
+.values-strip { background:var(--navy); padding:64px 48px; margin-top:0; }
+.values-strip-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:32px; text-align:center; }
+.vs-item h3 { font-family:var(--font-head); font-size:20px; color:var(--warm-l); margin-bottom:8px; }
+.vs-item p { font-size:14px; color:rgba(255,255,255,.55); line-height:1.6; }
+@media(max-width:960px){ .team-grid { grid-template-columns:1fr 1fr; } .values-strip-inner { grid-template-columns:1fr 1fr; } .values-strip { padding:48px 20px; } }
+@media(max-width:600px){ .team-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="service-supported-living.html">Supported Living</a>
+        <a href="service-domiciliary-care.html">Domiciliary Care</a>
+        <a href="service-intensive-support.html">Intensive Support</a>
+        <a href="service-daily-living.html">Daily Living Skills</a>
+        <a href="service-social-skills.html">Social Skills</a>
+        <a href="service-employment.html">Employment Services</a>
+        <a href="service-floating-support.html">Floating Support</a>
+        <a href="service-forensic.html">Forensic Placements</a>
+        <a href="service-personal-budget.html">Personal Budget</a>
+        <a href="service-referral.html">Client Referral</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Our Homes</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="refer.html" class="nav-cta">Refer a Client →</a></li>
+  </ul>
+</nav><div class="page-hero"><div class="page-hero-inner">
+  <div class="page-hero-breadcrumb"><a href="index.html">Home</a> / Meet Our Team</div>
+  <h1>Meet our team</h1>
+  <p>Our dedicated team of care professionals, support workers and managers are the heart of IHD Care. Get to know the people who make a difference every day.</p>
+</div></div>
+<section><div class="container">
+  <div class="section-label">Our people</div>
+  <h2 class="section-title">Experienced, compassionate &amp; dedicated</h2>
+  <p class="section-sub">Every member of our team shares a commitment to dignity, independence and person-centred care. We look forward to introducing you properly once team profiles are confirmed.</p>
+  <div class="team-grid">
+    <div class="team-card"><div class="team-photo tp1"><div class="team-initials ti-teal">MD</div></div>
+      <div class="team-info"><div class="team-name">Managing Director</div><div class="team-role">Leadership &amp; Strategy</div><div class="team-bio">Leading IHD Care's vision and growth, with over two decades of experience in mental health and supported living services.</div></div>
+    </div>
+    <div class="team-card"><div class="team-photo tp2"><div class="team-initials ti-warm">CM</div></div>
+      <div class="team-info"><div class="team-name">Care Manager</div><div class="team-role">Service Delivery</div><div class="team-bio">Overseeing the quality and delivery of care across all our properties, ensuring every service user receives outstanding support.</div></div>
+    </div>
+    <div class="team-card"><div class="team-photo tp3"><div class="team-initials ti-navy">SW</div></div>
+      <div class="team-info"><div class="team-name">Senior Support Worker</div><div class="team-role">Resident Care</div><div class="team-bio">Working directly with residents every day to build skills, confidence and progress towards independent living.</div></div>
+    </div>
+    <div class="team-card"><div class="team-photo tp4"><div class="team-initials ti-warm">CO</div></div>
+      <div class="team-info"><div class="team-name">Care Coordinator</div><div class="team-role">Referrals &amp; Assessments</div><div class="team-bio">Managing incoming referrals and coordinating assessments, ensuring every new service user gets off to the best possible start.</div></div>
+    </div>
+    <div class="team-card"><div class="team-photo tp5"><div class="team-initials ti-teal">SW</div></div>
+      <div class="team-info"><div class="team-name">Support Worker</div><div class="team-role">Daily Living Support</div><div class="team-bio">Providing compassionate, hands-on support with daily living skills, social activities and community integration.</div></div>
+    </div>
+    <div class="team-card"><div class="team-photo tp6"><div class="team-initials ti-navy">AD</div></div>
+      <div class="team-info"><div class="team-name">Administrator</div><div class="team-role">Operations &amp; Compliance</div><div class="team-bio">Keeping everything running smoothly behind the scenes, from compliance and record-keeping to communications.</div></div>
+    </div>
+  </div>
+</div></section>
+<div class="values-strip"><div class="values-strip-inner">
+  <div class="vs-item"><h3>Compassion</h3><p>Every member of our team leads with empathy and care in every interaction.</p></div>
+  <div class="vs-item"><h3>Expertise</h3><p>Trained in mental health, safeguarding and person-centred care delivery.</p></div>
+  <div class="vs-item"><h3>Dedication</h3><p>Many of our team have worked in care for years — it's a vocation, not just a job.</p></div>
+  <div class="vs-item"><h3>Diversity</h3><p>Our diverse team reflects and respects the communities we serve.</p></div>
+</div></div>
+<section style="background:var(--sand);"><div class="container" style="text-align:center;">
+  <div class="section-label">Join us</div>
+  <h2 class="section-title">Want to be part of the team?</h2>
+  <p class="section-sub" style="margin:0 auto 32px;">We're always looking for passionate, experienced care professionals. If our values resonate with you, we'd love to hear from you.</p>
+  <a href="careers.html" class="btn-primary">Join us today →</a>
+</div></section><footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></div>
+      <p style="color:rgba(255,255,255,.65);">Providing supported living and mental health care across the UK.</p>
+      <div class="footer-contact"><a href="tel:01344538094">📞 01344 538 094</a><a href="mailto:info@ihdcare.co.uk">✉ info@ihdcare.co.uk</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="service-supported-living.html">Supported Living</a></li><li><a href="service-domiciliary-care.html">Domiciliary Care</a></li><li><a href="service-intensive-support.html">Intensive Support</a></li><li><a href="service-daily-living.html">Daily Living Skills</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="about.html">About IHD Care</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">News</a></li><li><a href="careers.html">Work With Us</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="refer.html">Refer a Client</a></li><li><a href="contact.html">General Enquiry</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 IHD Care Ltd. All rights reserved.</span><span>Registered in England &amp; Wales</span></div>
+</footer></body></html>

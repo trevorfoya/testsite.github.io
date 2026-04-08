@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — IHD Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.mission { background: var(--sand); }
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.mission-text p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 18px; }
+.values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 20px; }
+.value-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 22px;
+  opacity: 0; transform: translateY(24px);
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+}
+.value-card.in-view { animation: valueIn .55s ease forwards; }
+.value-card:nth-child(1).in-view { animation-delay: 0s; }
+.value-card:nth-child(2).in-view { animation-delay: .12s; }
+.value-card:nth-child(3).in-view { animation-delay: .22s; }
+.value-card:nth-child(4).in-view { animation-delay: .32s; }
+@keyframes valueIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.value-card:hover { box-shadow: 0 6px 24px rgba(28,49,72,.12); transform: translateY(-3px); border-color: var(--teal); }
+.value-icon { width: 44px; height: 44px; border-radius: 11px; background: var(--teal-xl); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; transition: background .25s; }
+.value-icon svg { width: 21px; height: 21px; stroke: var(--teal); fill: none; stroke-width: 1.8; }
+.value-card:hover .value-icon { background: var(--teal); }
+.value-card:hover .value-icon svg { stroke: white; }
+.value-card h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 6px; }
+.value-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.stats-band { background: var(--navy); padding: 72px 48px; }
+.stats-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 32px; text-align: center; }
+.stat-num { font-family: var(--font-head); font-size: 48px; color: var(--warm-l); line-height: 1; }
+.stat-label { font-size: 14px; color: rgba(255,255,255,.55); margin-top: 8px; line-height: 1.4; }
+.team-preview { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 48px; }
+.team-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; text-align: center; }
+.team-photo { height: 200px; background: linear-gradient(135deg, var(--teal-xl), #b8e8e1); display: flex; align-items: center; justify-content: center; }
+.team-initials { width: 80px; height: 80px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; font-family: var(--font-head); font-size: 28px; color: var(--white); }
+.team-info { padding: 20px; }
+.team-name { font-size: 16px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
+.team-role { font-size: 13px; color: var(--muted); }
+@media(max-width:960px){ .mission-grid { grid-template-columns: 1fr; gap: 40px; } .stats-grid, .team-preview { grid-template-columns: 1fr 1fr; } .stats-band { padding: 48px 20px; } }
+@media(max-width:600px){ .stats-grid { grid-template-columns: 1fr 1fr; } .team-preview { grid-template-columns: 1fr; } .values-grid { grid-template-columns: 1fr; } }
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var cards = document.querySelectorAll('.value-card');
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(function (c) { obs.observe(c); });
+  } else {
+    // Fallback for older browsers — just show them
+    cards.forEach(function (c) { c.style.opacity = 1; c.style.transform = 'none'; });
+  }
+});
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></a>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About</a></li>
+    <li class="has-dropdown"><a href="services.html">Services ▾</a>
+      <div class="dropdown">
+        <a href="service-supported-living.html">Supported Living</a>
+        <a href="service-domiciliary-care.html">Domiciliary Care</a>
+        <a href="service-intensive-support.html">Intensive Support</a>
+        <a href="service-daily-living.html">Daily Living Skills</a>
+        <a href="service-social-skills.html">Social Skills</a>
+        <a href="service-employment.html">Employment Services</a>
+        <a href="service-floating-support.html">Floating Support</a>
+        <a href="service-forensic.html">Forensic Placements</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Our Homes</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="refer.html" class="nav-cta">Refer a Client →</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb"><a href="index.html">Home</a> / About Us</div>
+    <h1>We are IHD Care</h1>
+    <p>An organisation dedicated to helping adults experiencing long-term mental health difficulties live with dignity, independence and hope.</p>
+  </div>
+</div>
+
+<section class="mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mission-text">
+        <div class="section-label">Who we are</div>
+        <h2 class="section-title">Our mission &amp; ethos</h2>
+        <p>IHD Care offers adults with various mental health difficulties a family-setting residential experience where each individual is respected, valued and nurtured to allow their talents and strengths to develop.</p>
+        <p>We encourage residents to develop their confidence and wellbeing, leading to fulfilment of their independence. Our staff aim to foster positive relationships through shared daily life in a well-maintained, safe and stimulating environment.</p>
+        <p>We work closely with all agencies to enable residents to reintegrate back into communities, families or independent living. Care plans are actively reviewed and monitored, and feedback is always welcomed.</p>
+        <p>We work with adults experiencing: long and enduring mental health difficulties, substance misuse and other complex needs. Our programme provides a step-down service, helping individuals move from supported living to fully independent living.</p>
+        <a href="refer.html" class="btn-primary" style="margin-top:12px;">Make a Referral →</a>
+      </div>
+      <div>
+        <div class="section-label">Our values</div>
+        <h3 style="font-family:var(--font-head);font-size:26px;color:var(--navy);margin-bottom:20px;">What guides everything we do</h3>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <h4>Compassion</h4>
+            <p>Every decision is made with care and empathy at its heart.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a6 6 0 0112 0v2"/></svg></div>
+            <h4>Dignity</h4>
+            <p>Each person is treated with respect and as an individual.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h4>Independence</h4>
+            <p>Our goal is always to help people live more independently.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <h4>Partnership</h4>
+            <p>We work collaboratively with families, CMHT and Social Services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-band">
+  <div class="stats-grid">
+    <div><div class="stat-num">9+</div><div class="stat-label">Years providing care</div></div>
+    <div><div class="stat-num">5</div><div class="stat-label">Supported homes</div></div>
+    <div><div class="stat-num">24/7</div><div class="stat-label">Support available</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Person-centred approach</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-label">Our team</div>
+    <h2 class="section-title">The people behind IHD Care</h2>
+    <p class="section-sub">Our experienced team of support workers, managers and care coordinators are dedicated to making a real difference every day.</p>
+    <div class="team-preview">
+      <div class="team-card">
+        <div class="team-photo"><div class="team-initials">MD</div></div>
+        <div class="team-info"><div class="team-name">Management Director</div><div class="team-role">Leadership &amp; Strategy</div></div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,var(--warm-xl),#f0dbb8);"><div class="team-initials" style="background:var(--warm);">CM</div></div>
+        <div class="team-info"><div class="team-name">Care Manager</div><div class="team-role">Service Delivery</div></div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo" style="background:linear-gradient(135deg,#e8eef7,#c5d5ee);"><div class="team-initials" style="background:var(--navy);">SW</div></div>
+        <div class="team-info"><div class="team-name">Senior Support Worker</div><div class="team-role">Resident Care</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;"><a href="team.html" class="btn-navy">Meet the full team →</a></div>
+  </div>
+</section>
+
+<div class="referral-band">
+  <div class="referral-inner">
+    <div>
+      <h2>Get in touch with IHD Care</h2>
+      <p>Whether you're a professional referrer, a family member or someone seeking care, we'd love to hear from you.</p>
+    </div>
+    <a href="contact.html" class="btn-white">Contact us →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></div>
+      <p style="color:rgba(255,255,255,.65);">Providing supported living and mental health care services across the UK.</p>
+      <div class="footer-contact"><a href="tel:01344538094">📞 01344 538 094</a><a href="mailto:info@ihdcare.co.uk">✉ info@ihdcare.co.uk</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="service-supported-living.html">Supported Living</a></li><li><a href="service-domiciliary-care.html">Domiciliary Care</a></li><li><a href="service-intensive-support.html">Intensive Support</a></li><li><a href="service-daily-living.html">Daily Living Skills</a></li><li><a href="service-forensic.html">Forensic Placements</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="about.html">About IHD Care</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="gallery.html">Our Homes</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">News &amp; Blog</a></li><li><a href="careers.html">Work With Us</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="refer.html">Refer a Client</a></li><li><a href="contact.html">General Enquiry</a></li><li><a href="careers.html">Careers</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 IHD Care Ltd. All rights reserved.</span><span>Registered in England &amp; Wales · <a href="#">CQC Registration</a></span></div>
+</footer>
+</body>
+</html>

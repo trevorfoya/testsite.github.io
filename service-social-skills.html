@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Social Skills — IHD Care</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.svc-layout { display:grid; grid-template-columns:2fr 1fr; gap:56px; align-items:start; }
+.svc-body p { font-size:16px; color:var(--muted); line-height:1.8; margin-bottom:18px; }
+.svc-body h3 { font-family:var(--font-head); font-size:22px; color:var(--navy); margin:32px 0 14px; }
+.svc-list { list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:18px; }
+.svc-list li { display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--muted); line-height:1.6; }
+.svc-list li::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--teal); flex-shrink:0; margin-top:7px; }
+.sidebar { display:flex; flex-direction:column; gap:18px; position:sticky; top:90px; }
+.sidebar-card { background:var(--white); border:1px solid var(--border); border-radius:16px; padding:24px; }
+.sidebar-card h4 { font-size:14px; font-weight:500; color:var(--navy); margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border); }
+.sidebar-card p { font-size:14px; color:var(--muted); line-height:1.65; }
+.sidebar-card a { display:block; font-size:14px; color:var(--muted); text-decoration:none; padding:7px 0; border-bottom:1px solid var(--border); transition:color .2s; }
+.sidebar-card a:last-child { border-bottom:none; }
+.sidebar-card a:hover { color:var(--teal); }
+.cta-card { background:var(--teal); border-radius:16px; padding:28px; color:var(--white); }
+.cta-card h4 { font-size:18px; font-family:var(--font-head); margin-bottom:10px; color:var(--white); }
+.cta-card p { font-size:14px; color:rgba(255,255,255,.8); line-height:1.65; margin-bottom:18px; }
+@media(max-width:960px){ .svc-layout { grid-template-columns:1fr; } .sidebar { position:static; } }
+</style>
+</head>
+<body><nav>
+  <a href="index.html" class="nav-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown"><a href="services.html" class="active">Services ▾</a>
+      <div class="dropdown">
+        <a href="service-supported-living.html">Supported Living</a>
+        <a href="service-domiciliary-care.html">Domiciliary Care</a>
+        <a href="service-intensive-support.html">Intensive Support</a>
+        <a href="service-daily-living.html">Daily Living Skills</a>
+        <a href="service-social-skills.html">Social Skills</a>
+        <a href="service-employment.html">Employment Services</a>
+        <a href="service-floating-support.html">Floating Support</a>
+        <a href="service-forensic.html">Forensic Placements</a>
+        <a href="service-personal-budget.html">Personal Budget</a>
+        <a href="service-person-centred.html">Person Centred Solutions</a>
+        <a href="service-referral.html">Client Referral</a>
+      </div>
+    </li>
+    <li><a href="gallery.html">Our Homes</a></li>
+    <li><a href="team.html">Our Team</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="refer.html" class="nav-cta">Refer a Client →</a></li>
+  </ul>
+</nav><div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-breadcrumb"><a href="index.html">Home</a> / <a href="services.html">Services</a> / Social Skills</div>
+    <h1>Social Skills Development</h1>
+    <p>Helping service users build the confidence and social skills they need to thrive in the community.</p>
+  </div>
+</div><section><div class="container"><div class="svc-layout">
+<div class="svc-body"><h2 class="section-title">Developing social confidence</h2>
+<p>Our social skills programme works with service users to develop the interpersonal abilities and community confidence that are essential for independent living. Staff work closely with each individual to understand their starting point and tailor support accordingly.</p>
+<h3>Areas we work on</h3>
+<ul class="svc-list">
+  <li>Assertiveness — protecting against vulnerability and abuse</li>
+  <li>Confidence building in everyday situations</li>
+  <li>Going out and about in the community</li>
+  <li>Dressing appropriately for different occasions</li>
+  <li>Communication skills — both verbal and non-verbal</li>
+  <li>Appropriate behaviour in different settings</li>
+  <li>Managing alcohol and drug use (safe limits and recovery programmes)</li>
+  <li>Health and wellbeing awareness</li>
+  <li>Managing relationships with family and professionals</li>
+</ul>
+<h3>How this helps</h3>
+<p>Building social skills is foundational to every other aspect of independent living. When service users have the confidence and ability to engage with their community, manage relationships and advocate for themselves, outcomes across all areas of life improve significantly.</p>
+<a href="refer.html" class="btn-primary" style="margin-top:12px;">Refer a client →</a></div>
+<aside class="sidebar">
+  <div class="cta-card">
+    <h4>Make a referral</h4>
+    <p>Ready to refer a client? Complete our online referral form and we'll respond within 24 hours.</p>
+    <a href="refer.html" class="btn-white" style="font-size:14px;padding:11px 20px;">Start referral →</a>
+  </div>
+  <div class="sidebar-card">
+    <h4>All services</h4>
+    <a href="service-supported-living.html">Supported Living</a>
+    <a href="service-domiciliary-care.html">Domiciliary Care</a>
+    <a href="service-intensive-support.html">Intensive Support</a>
+    <a href="service-daily-living.html">Daily Living Skills</a>
+    <a href="service-social-skills.html">Social Skills</a>
+    <a href="service-employment.html">Employment Services</a>
+    <a href="service-floating-support.html">Floating Support</a>
+    <a href="service-forensic.html">Forensic Placements</a>
+    <a href="service-personal-budget.html">Personal Budget</a>
+    <a href="service-person-centred.html">Person Centred Solutions</a>
+    <a href="service-referral.html">Client Referral</a>
+  </div>
+  <div class="sidebar-card">
+    <h4>Contact us</h4>
+    <p style="margin-bottom:12px;">📞 <a href="tel:01344538094" style="color:var(--teal);text-decoration:none;">01344 538 094</a></p>
+    <p>✉ <a href="mailto:info@ihdcare.co.uk" style="color:var(--teal);text-decoration:none;">info@ihdcare.co.uk</a></p>
+  </div>
+</aside>
+</div></div></section><div class="referral-band"><div class="referral-inner">
+    <div><h2>Interested in this service?</h2><p>Contact our team or submit a referral and we'll be in touch within 24 hours.</p></div>
+    <a href="refer.html" class="btn-white">Make a referral →</a>
+  </div></div><footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="https://ihdcare.co.uk/assets/images/image20.png?v=752fafef" alt="IHD Care" onerror="this.style.display='none'"></div>
+      <p style="color:rgba(255,255,255,.65);">Providing supported living and mental health care across the UK.</p>
+      <div class="footer-contact"><a href="tel:01344538094">📞 01344 538 094</a><a href="mailto:info@ihdcare.co.uk">✉ info@ihdcare.co.uk</a></div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="service-supported-living.html">Supported Living</a></li><li><a href="service-domiciliary-care.html">Domiciliary Care</a></li><li><a href="service-intensive-support.html">Intensive Support</a></li><li><a href="service-daily-living.html">Daily Living Skills</a></li></ul></div>
+    <div class="footer-col"><h4>Organisation</h4><ul><li><a href="about.html">About IHD Care</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="news.html">News</a></li><li><a href="careers.html">Work With Us</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a href="refer.html">Refer a Client</a></li><li><a href="contact.html">General Enquiry</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 IHD Care Ltd. All rights reserved.</span><span>Registered in England &amp; Wales</span></div>
+</footer>
+</body>
+</html>
